@@ -64,30 +64,51 @@ final class ViewController: UIViewController {
     // MARK: - Setup
 
     private func makePages() -> [Page] {
-        let titles = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"]
+        let count = 20
 
-        return titles.enumerated().map { index, title in
+        return (0..<count).map { index in
+            let title = titleForIndex(index)
+            let color = pageColor(for: index)
+
             let vc = PageViewController(
                 text: title,
-                backgroundColor: UIColor(
-                    hue: CGFloat(index) / CGFloat(titles.count),
-                    saturation: 0.6,
-                    brightness: 0.85,
-                    alpha: 1.0
-                )
+                backgroundColor: color
             )
 
             let label = UILabel()
             label.text = title
             label.font = tabFont
             label.textAlignment = .center
-            label.numberOfLines = 1
 
-            // width cache (use same font + add a little safety padding)
-            let width = (title as NSString).size(withAttributes: [.font: tabFont]).width.rounded(.up) + 2
+            let width = (title as NSString)
+                .size(withAttributes: [.font: tabFont])
+                .width
+                .rounded(.up) + 2
 
-            return Page(title: title, viewController: vc, tabLabel: label, tabWidth: width)
+            return Page(
+                title: title,
+                viewController: vc,
+                tabLabel: label,
+                tabWidth: width
+            )
         }
+    }
+
+    private func titleForIndex(_ index: Int) -> String {
+        "Tab \(index + 1)"
+    }
+    
+    private let pageColors: [UIColor] = [
+        .systemRed,
+        .systemBlue,
+        .systemGreen,
+        .systemOrange,
+        .systemPurple,
+        .systemTeal
+    ]
+
+    private func pageColor(for index: Int) -> UIColor {
+        pageColors[index % pageColors.count]
     }
 
     private func updateTabColors(selectedIndex: Int, previousIndex: Int?) {
