@@ -1,6 +1,6 @@
 //
 //  SegmentState.swift
-//  SegmentKit
+//  SegmentedPager
 //
 
 import Foundation

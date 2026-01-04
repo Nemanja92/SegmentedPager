@@ -1,6 +1,6 @@
 //
 //  SegmentIndicatorAnimator.swift
-//  SegmentKit
+//  SegmentedPager
 //
 
 import UIKit

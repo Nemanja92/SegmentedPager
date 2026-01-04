@@ -1,6 +1,6 @@
 //
 //  SegmentConfiguration.swift
-//  SegmentKit
+//  SegmentedPager
 //
 
 import UIKit

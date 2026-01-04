@@ -1,6 +1,6 @@
 //
 //  SegmentTabLayoutEngine.swift
-//  SegmentKit
+//  SegmentedPager
 //
 
 import UIKit
