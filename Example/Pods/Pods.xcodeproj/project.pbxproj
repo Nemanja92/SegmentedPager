@@ -12,13 +12,25 @@
 		4DEA8BFEDDD9A0F7EE3B94097F6BE2CA /* Pods-SegmentedPager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 841435A172FB4ADDC603295EF751626F /* Pods-SegmentedPager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		630BC2DD3DC9CA382FEFFC91C582BA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		706B6A32E8A116AC6D39EEBE08947DC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		7F373F6B2F0AED86000FC954 /* SegmentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F682F0AED86000FC954 /* SegmentProtocols.swift */; };
+		7F373F6C2F0AED86000FC954 /* SegmentIndicatorAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F672F0AED86000FC954 /* SegmentIndicatorAnimator.swift */; };
+		7F373F6D2F0AED86000FC954 /* SegmentedPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F662F0AED86000FC954 /* SegmentedPagerViewController.swift */; };
+		7F373F6E2F0AED86000FC954 /* SegmentTabLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F6A2F0AED86000FC954 /* SegmentTabLayoutEngine.swift */; };
+		7F373F6F2F0AED86000FC954 /* SegmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F692F0AED86000FC954 /* SegmentState.swift */; };
+		7F373F702F0AEDA8000FC954 /* SegmentIndicatorAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F672F0AED86000FC954 /* SegmentIndicatorAnimator.swift */; };
+		7F373F712F0AEDA8000FC954 /* SegmentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F682F0AED86000FC954 /* SegmentProtocols.swift */; };
+		7F373F722F0AEDA8000FC954 /* SegmentedPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F662F0AED86000FC954 /* SegmentedPagerViewController.swift */; };
+		7F373F732F0AEDA8000FC954 /* SegmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F692F0AED86000FC954 /* SegmentState.swift */; };
+		7F373F742F0AEDA8000FC954 /* SegmentTabLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F6A2F0AED86000FC954 /* SegmentTabLayoutEngine.swift */; };
+		7F373F752F0AEDA8000FC954 /* SegmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F692F0AED86000FC954 /* SegmentState.swift */; };
+		7F373F762F0AEDA8000FC954 /* SegmentTabLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F6A2F0AED86000FC954 /* SegmentTabLayoutEngine.swift */; };
+		7F373F772F0AEDA8000FC954 /* SegmentIndicatorAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F672F0AED86000FC954 /* SegmentIndicatorAnimator.swift */; };
+		7F373F782F0AEDA8000FC954 /* SegmentedPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F662F0AED86000FC954 /* SegmentedPagerViewController.swift */; };
+		7F373F792F0AEDA8000FC954 /* SegmentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F682F0AED86000FC954 /* SegmentProtocols.swift */; };
+		7F373F7B2F0AEDC7000FC954 /* SegmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F7A2F0AEDC7000FC954 /* SegmentConfiguration.swift */; };
+		7F373F7C2F0AEDC7000FC954 /* SegmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F7A2F0AEDC7000FC954 /* SegmentConfiguration.swift */; };
+		7F373F7D2F0AEDC7000FC954 /* SegmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F373F7A2F0AEDC7000FC954 /* SegmentConfiguration.swift */; };
 		7FAAFDEEF542894D6B53E4B5A773D68C /* Pods-SegmentedPager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56FE47E93B10CBAC603E9E05008551 /* Pods-SegmentedPager_Tests-dummy.m */; };
-		7FF3B4CC2F0AD5F70070C726 /* SegmentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3B4C92F0AD5F70070C726 /* SegmentProtocols.swift */; };
-		7FF3B4CD2F0AD5F70070C726 /* SegmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3B4C62F0AD5F70070C726 /* SegmentConfiguration.swift */; };
-		7FF3B4CE2F0AD5F70070C726 /* SegmentedPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3B4C72F0AD5F70070C726 /* SegmentedPagerViewController.swift */; };
-		7FF3B4CF2F0AD5F70070C726 /* SegmentIndicatorAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3B4C82F0AD5F70070C726 /* SegmentIndicatorAnimator.swift */; };
-		7FF3B4D02F0AD5F70070C726 /* SegmentTabLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3B4CB2F0AD5F70070C726 /* SegmentTabLayoutEngine.swift */; };
-		7FF3B4D12F0AD5F70070C726 /* SegmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3B4CA2F0AD5F70070C726 /* SegmentState.swift */; };
 		A5B69AD1B4D0DFCB9EA17859E1495C38 /* SegmentedPager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B66E3B2E3D7BF9067D5F5C2ADB13AB9 /* SegmentedPager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F34FCDE00C621B969CE3E7E35A304380 /* SegmentedPager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64523520AC09F551022CE7EDB0E73DCB /* SegmentedPager-dummy.m */; };
 		F6047429F3F78F87FEC7152AC1602991 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
@@ -55,12 +67,12 @@
 		6B791E761436E2954A47FA06BEE1C464 /* Pods-SegmentedPager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SegmentedPager_Tests.modulemap"; sourceTree = "<group>"; };
 		7219DA0996C6007A68A0697A9C14A00B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7B66E3B2E3D7BF9067D5F5C2ADB13AB9 /* SegmentedPager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegmentedPager-umbrella.h"; sourceTree = "<group>"; };
-		7FF3B4C62F0AD5F70070C726 /* SegmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConfiguration.swift; sourceTree = "<group>"; };
-		7FF3B4C72F0AD5F70070C726 /* SegmentedPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPagerViewController.swift; sourceTree = "<group>"; };
-		7FF3B4C82F0AD5F70070C726 /* SegmentIndicatorAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentIndicatorAnimator.swift; sourceTree = "<group>"; };
-		7FF3B4C92F0AD5F70070C726 /* SegmentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentProtocols.swift; sourceTree = "<group>"; };
-		7FF3B4CA2F0AD5F70070C726 /* SegmentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentState.swift; sourceTree = "<group>"; };
-		7FF3B4CB2F0AD5F70070C726 /* SegmentTabLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTabLayoutEngine.swift; sourceTree = "<group>"; };
+		7F373F662F0AED86000FC954 /* SegmentedPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPagerViewController.swift; sourceTree = "<group>"; };
+		7F373F672F0AED86000FC954 /* SegmentIndicatorAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentIndicatorAnimator.swift; sourceTree = "<group>"; };
+		7F373F682F0AED86000FC954 /* SegmentProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentProtocols.swift; sourceTree = "<group>"; };
+		7F373F692F0AED86000FC954 /* SegmentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentState.swift; sourceTree = "<group>"; };
+		7F373F6A2F0AED86000FC954 /* SegmentTabLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTabLayoutEngine.swift; sourceTree = "<group>"; };
+		7F373F7A2F0AEDC7000FC954 /* SegmentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentConfiguration.swift; sourceTree = "<group>"; };
 		841435A172FB4ADDC603295EF751626F /* Pods-SegmentedPager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegmentedPager_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8E5804005A664992D7ECE27C3CD168F6 /* SegmentedPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegmentedPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91707F1DE6BFEA647682ECDA88D2B8DE /* SegmentedPager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SegmentedPager-Info.plist"; sourceTree = "<group>"; };
@@ -162,6 +174,19 @@
 			path = "Target Support Files/Pods-SegmentedPager_Example";
 			sourceTree = "<group>";
 		};
+		7FB386402F0AED5100A0CD30 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7F373F662F0AED86000FC954 /* SegmentedPagerViewController.swift */,
+				7F373F7A2F0AEDC7000FC954 /* SegmentConfiguration.swift */,
+				7F373F672F0AED86000FC954 /* SegmentIndicatorAnimator.swift */,
+				7F373F682F0AED86000FC954 /* SegmentProtocols.swift */,
+				7F373F692F0AED86000FC954 /* SegmentState.swift */,
+				7F373F6A2F0AED86000FC954 /* SegmentTabLayoutEngine.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		C89F612E75C7DFB0DCBCF00812AF3B98 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,12 +250,7 @@
 		FBBFDE2A20EB3F7343390108F24376A1 /* SegmentedPager */ = {
 			isa = PBXGroup;
 			children = (
-				7FF3B4C62F0AD5F70070C726 /* SegmentConfiguration.swift */,
-				7FF3B4C72F0AD5F70070C726 /* SegmentedPagerViewController.swift */,
-				7FF3B4C82F0AD5F70070C726 /* SegmentIndicatorAnimator.swift */,
-				7FF3B4C92F0AD5F70070C726 /* SegmentProtocols.swift */,
-				7FF3B4CA2F0AD5F70070C726 /* SegmentState.swift */,
-				7FF3B4CB2F0AD5F70070C726 /* SegmentTabLayoutEngine.swift */,
+				7FB386402F0AED5100A0CD30 /* Classes */,
 				CCC735A8AA06F5E86B849DDCA4A6897F /* Pod */,
 				C89F612E75C7DFB0DCBCF00812AF3B98 /* Support Files */,
 			);
@@ -332,6 +352,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5DD52D30CA6688DFDD91269319788645 = {
+						LastSwiftMigration = 2620;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -382,6 +407,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F373F752F0AEDA8000FC954 /* SegmentState.swift in Sources */,
+				7F373F762F0AEDA8000FC954 /* SegmentTabLayoutEngine.swift in Sources */,
+				7F373F772F0AEDA8000FC954 /* SegmentIndicatorAnimator.swift in Sources */,
+				7F373F7C2F0AEDC7000FC954 /* SegmentConfiguration.swift in Sources */,
+				7F373F782F0AEDA8000FC954 /* SegmentedPagerViewController.swift in Sources */,
+				7F373F792F0AEDA8000FC954 /* SegmentProtocols.swift in Sources */,
 				7FAAFDEEF542894D6B53E4B5A773D68C /* Pods-SegmentedPager_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,13 +421,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F373F6B2F0AED86000FC954 /* SegmentProtocols.swift in Sources */,
+				7F373F6C2F0AED86000FC954 /* SegmentIndicatorAnimator.swift in Sources */,
+				7F373F6D2F0AED86000FC954 /* SegmentedPagerViewController.swift in Sources */,
+				7F373F7B2F0AEDC7000FC954 /* SegmentConfiguration.swift in Sources */,
+				7F373F6E2F0AED86000FC954 /* SegmentTabLayoutEngine.swift in Sources */,
+				7F373F6F2F0AED86000FC954 /* SegmentState.swift in Sources */,
 				F34FCDE00C621B969CE3E7E35A304380 /* SegmentedPager-dummy.m in Sources */,
-				7FF3B4CC2F0AD5F70070C726 /* SegmentProtocols.swift in Sources */,
-				7FF3B4CD2F0AD5F70070C726 /* SegmentConfiguration.swift in Sources */,
-				7FF3B4CE2F0AD5F70070C726 /* SegmentedPagerViewController.swift in Sources */,
-				7FF3B4CF2F0AD5F70070C726 /* SegmentIndicatorAnimator.swift in Sources */,
-				7FF3B4D02F0AD5F70070C726 /* SegmentTabLayoutEngine.swift in Sources */,
-				7FF3B4D12F0AD5F70070C726 /* SegmentState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +435,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F373F702F0AEDA8000FC954 /* SegmentIndicatorAnimator.swift in Sources */,
+				7F373F712F0AEDA8000FC954 /* SegmentProtocols.swift in Sources */,
+				7F373F722F0AEDA8000FC954 /* SegmentedPagerViewController.swift in Sources */,
+				7F373F7D2F0AEDC7000FC954 /* SegmentConfiguration.swift in Sources */,
+				7F373F732F0AEDA8000FC954 /* SegmentState.swift in Sources */,
+				7F373F742F0AEDA8000FC954 /* SegmentTabLayoutEngine.swift in Sources */,
 				069EEC8744A9EDEB05CC6CFCAA60E049 /* Pods-SegmentedPager_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7A44897ACED4824249AFC68AD6A2C39 /* SegmentedPager.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -454,6 +492,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -465,7 +504,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D6B86351ECF3AFBEE6B3466E56597946 /* Pods-SegmentedPager_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -561,7 +599,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01D08A8FA0DB087EF1B9E5CB8FDA5000 /* Pods-SegmentedPager_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -597,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 064339F4A0D4D6BE6E2716EB92FE636A /* SegmentedPager.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -633,7 +671,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEE873903E16D81692025C2A755A9CE3 /* Pods-SegmentedPager_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -669,7 +706,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E31F1DC242FF825B01FE4457D0994879 /* Pods-SegmentedPager_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

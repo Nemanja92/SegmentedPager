@@ -122,9 +122,9 @@ open class SegmentedPagerViewController: UIViewController {
     }
 
     private func setupPageViewController() {
-        addChildViewController(pageViewController)
+        addChild(pageViewController)
         view.addSubview(pageViewController.view)
-        pageViewController.didMove(toParentViewController: self)
+        pageViewController.didMove(toParent: self)
 
         pageViewController.dataSource = self
         pageViewController.delegate = self
