@@ -23,6 +23,7 @@ final class ViewController: UIViewController {
 
     private lazy var segmentedPagerVC: SegmentedPagerViewController = {
         var config = SegmentConfiguration.default
+        config.tab.alignment = .fillEqually
         config.tab.padding = 10
         config.tab.leadingPadding = 10
         config.tab.trailingPadding = 10
@@ -64,7 +65,7 @@ final class ViewController: UIViewController {
     // MARK: - Setup
 
     private func makePages() -> [Page] {
-        let count = 20
+        let count = 4
 
         return (0..<count).map { index in
             let title = titleForIndex(index)

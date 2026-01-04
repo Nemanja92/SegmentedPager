@@ -11,6 +11,12 @@ public enum TabAnimationType: Sendable {
     case end
 }
 
+public enum SegmentTabAlignment: Sendable {
+    case leading
+    case center
+    case fillEqually
+}
+
 public struct SegmentConfiguration: Sendable {
 
     public struct Tab: Sendable {
@@ -19,6 +25,7 @@ public struct SegmentConfiguration: Sendable {
         public var padding: CGFloat
         public var leadingPadding: CGFloat
         public var trailingPadding: CGFloat
+        public var alignment: SegmentTabAlignment
 
         public var backgroundColor: UIColor
         public var defaultFont: UIFont
@@ -32,6 +39,7 @@ public struct SegmentConfiguration: Sendable {
             padding: CGFloat = 0,
             leadingPadding: CGFloat = 0,
             trailingPadding: CGFloat = 0,
+            alignment: SegmentTabAlignment = .leading,
             backgroundColor: UIColor = .clear,
             defaultFont: UIFont = .systemFont(ofSize: 12),
             selectedFont: UIFont = .systemFont(ofSize: 12),
@@ -43,6 +51,7 @@ public struct SegmentConfiguration: Sendable {
             self.padding = padding
             self.leadingPadding = leadingPadding
             self.trailingPadding = trailingPadding
+            self.alignment = alignment
             self.backgroundColor = backgroundColor
             self.defaultFont = defaultFont
             self.selectedFont = selectedFont

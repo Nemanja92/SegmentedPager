@@ -41,50 +41,81 @@ public final class DefaultSegmentTabLayoutEngine: SegmentTabLayingOut {
 
         let tab = config.tab
 
-        var contentWidth: CGFloat = 0
-        var previous: UIView?
+        guard !tabViews.isEmpty else {
+            scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: tab.height)
+            return 0
+        }
 
+        let availableWidth = scrollView.bounds.width
+
+        // Determine widths
+        var widths: [CGFloat] = []
+        widths.reserveCapacity(tabViews.count)
+
+        switch tab.alignment {
+        case .fillEqually:
+            // Equal widths that fill the visible width.
+            // Padding is kept, so each tab width is computed from remaining space.
+            let count = CGFloat(tabViews.count)
+            let totalPadding = tab.leadingPadding
+                + tab.trailingPadding
+                + tab.padding * max(0, count - 1)
+
+            let remaining = max(0, availableWidth - totalPadding)
+            let equalWidth = remaining / max(1, count)
+            widths = Array(repeating: equalWidth, count: tabViews.count)
+
+        case .leading, .center:
+            for (i, v) in tabViews.enumerated() {
+                let w = resolveTabWidth(
+                    index: i,
+                    tabView: v,
+                    config: config,
+                    widthForIndex: widthForIndex
+                )
+                widths.append(w)
+            }
+        }
+
+        // Compute content width based on widths and padding
+        let totalWidths = widths.reduce(0, +)
+        let totalInterPadding = tab.padding * CGFloat(max(0, tabViews.count - 1))
+        var contentWidth = tab.leadingPadding + totalWidths + totalInterPadding + tab.trailingPadding
+
+        // For center alignment, shift the whole group if it fits
+        var startX = tab.leadingPadding
+        if tab.alignment == .center, contentWidth < availableWidth {
+            startX = (availableWidth - (contentWidth - tab.trailingPadding - tab.leadingPadding)) / 2
+            // Explanation:
+            // we center the group width (totalWidths + interPadding) inside visible width,
+            // then startX becomes left inset. trailingPadding is effectively symmetric.
+        }
+
+        // Layout frames
+        var x = startX
         for (i, v) in tabViews.enumerated() {
             var frame = v.frame
             frame.origin.y = 0
             frame.size.height = tab.height
-
-            let resolvedWidth = resolveTabWidth(
-                index: i,
-                tabView: v,
-                config: config,
-                widthForIndex: widthForIndex
-            )
-            frame.size.width = resolvedWidth
-
-            if previous == nil {
-                frame.origin.x = tab.leadingPadding
-                contentWidth = tab.leadingPadding + resolvedWidth
-            } else {
-                frame.origin.x = (previous?.frame.maxX ?? 0) + tab.padding
-                contentWidth += tab.padding + resolvedWidth
-                if i == tabViews.count - 1 {
-                    contentWidth += tab.trailingPadding
-                }
-            }
-
+            frame.size.width = widths[i]
+            frame.origin.x = x
             v.frame = frame
-            previous = v
-        }
-        
-        // Center tabs if total width is smaller than visible width
-        if contentWidth < scrollView.bounds.width {
-            let extraLeft = (scrollView.bounds.width - contentWidth) / 2
-            for v in tabViews {
-                var f = v.frame
-                f.origin.x += extraLeft
-                v.frame = f
+
+            x += widths[i]
+            if i < tabViews.count - 1 {
+                x += tab.padding
             }
-            // contentWidth becomes full width visually
-            scrollView.contentSize = CGSize(width: scrollView.bounds.width, height: tab.height)
-        } else {
-            scrollView.contentSize = CGSize(width: contentWidth, height: tab.height)
         }
+
+        // Content size
+        if tab.alignment == .fillEqually {
+            // Fill equally always fits screen, scrolling not needed
+            contentWidth = availableWidth
+        } else if tab.alignment == .center, contentWidth < availableWidth {
+            contentWidth = availableWidth
+        }
+
+        scrollView.contentSize = CGSize(width: max(contentWidth, availableWidth), height: tab.height)
         return contentWidth
     }
 
@@ -102,22 +133,18 @@ public final class DefaultSegmentTabLayoutEngine: SegmentTabLayingOut {
         let indicator = config.indicator
 
         let tabView = tabViews[index]
-        let tabWidthResolved = resolveTabWidth(
-            index: index,
-            tabView: tabView,
-            config: config,
-            widthForIndex: widthForIndex
-        )
+
+        let tabWidthActual = tabView.frame.width
 
         let width: CGFloat
         if let fixedIndicatorWidth = indicator.fixedWidth {
             width = fixedIndicatorWidth
         } else {
-            width = tabWidthResolved
+            width = tabWidthActual
         }
 
-        // align indicator under the tab view (centered if indicator width differs)
-        let x = tabView.frame.minX + (tabWidthResolved - width) / 2
+        // Center indicator under the tab if needed
+        let x = tabView.frame.minX + (tabWidthActual - width) / 2
 
         return CGRect(
             x: x,
