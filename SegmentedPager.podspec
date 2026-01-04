@@ -17,7 +17,8 @@ Useful for building tabbed paging interfaces similar to many popular apps.
   s.ios.deployment_target = '26.0'
   s.swift_versions    = ['6.0']
 
-  s.source_files      = 'SegmentedPager/Classes/**/*'
+  s.source_files = "Classes/**/*.{swift}"
+  s.exclude_files = "Example/**/*"
 
   # If you add assets later, you can enable this:
   # s.resource_bundles = {
