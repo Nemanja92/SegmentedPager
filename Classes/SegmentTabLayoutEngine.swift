@@ -28,7 +28,8 @@ public protocol SegmentTabLayingOut {
     ) -> SegmentTransitionMetrics
 }
 
-public final class DefaultSegmentTabLayoutEngine: SegmentTabLayingOut {
+@MainActor
+public final class DefaultSegmentTabLayoutEngine: @MainActor SegmentTabLayingOut {
 
     public init() {}
 
@@ -85,10 +86,9 @@ public final class DefaultSegmentTabLayoutEngine: SegmentTabLayingOut {
         // For center alignment, shift the whole group if it fits
         var startX = tab.leadingPadding
         if tab.alignment == .center, contentWidth < availableWidth {
-            startX = (availableWidth - (contentWidth - tab.trailingPadding - tab.leadingPadding)) / 2
-            // Explanation:
-            // we center the group width (totalWidths + interPadding) inside visible width,
-            // then startX becomes left inset. trailingPadding is effectively symmetric.
+            // Center group width (totalWidths + interPadding) inside visible width
+            let groupWidth = totalWidths + totalInterPadding
+            startX = (availableWidth - groupWidth) / 2
         }
 
         // Layout frames
@@ -133,15 +133,9 @@ public final class DefaultSegmentTabLayoutEngine: SegmentTabLayingOut {
         let indicator = config.indicator
 
         let tabView = tabViews[index]
-
         let tabWidthActual = tabView.frame.width
 
-        let width: CGFloat
-        if let fixedIndicatorWidth = indicator.fixedWidth {
-            width = fixedIndicatorWidth
-        } else {
-            width = tabWidthActual
-        }
+        let width: CGFloat = indicator.fixedWidth ?? tabWidthActual
 
         // Center indicator under the tab if needed
         let x = tabView.frame.minX + (tabWidthActual - width) / 2

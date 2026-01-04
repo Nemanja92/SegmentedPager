@@ -71,14 +71,18 @@ public struct SegmentState: Sendable {
 public extension SegmentState {
 
     /// Computes progress (0..1) based on the internal UIPageViewController scroll view.
+    @MainActor
     static func progress(scrollView: UIScrollView) -> CGFloat {
-        guard scrollView.frame.width > 0 else { return 0 }
+        let width = scrollView.frame.width
+        guard width > 0 else { return 0 }
+
         // UIPageViewController's internal scroll view usually has current page centered at width.
-        let raw = abs((scrollView.contentOffset.x - scrollView.frame.width) / scrollView.frame.width)
+        let raw = abs((scrollView.contentOffset.x - width) / width)
         return min(max(raw, 0), 1)
     }
 
     /// Determines direction based on contentOffset relative to "center page".
+    @MainActor
     static func direction(scrollView: UIScrollView) -> SegmentScrollDirection {
         (scrollView.contentOffset.x - scrollView.frame.width) > 0 ? .right : .left
     }
