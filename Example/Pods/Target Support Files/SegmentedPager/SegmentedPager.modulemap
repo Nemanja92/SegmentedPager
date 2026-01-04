@@ -1,0 +1,6 @@
+framework module SegmentedPager {
+  umbrella header "SegmentedPager-umbrella.h"
+
+  export *
+  module * { export * }
+}

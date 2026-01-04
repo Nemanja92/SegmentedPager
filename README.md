@@ -1,12 +1,9 @@
-# SegmentViewController
+# SegmentedPager
 
-[![CI Status](http://img.shields.io/travis/Nemanja92/SegmentViewController.svg?style=flat)](https://travis-ci.org/Nemanja92/SegmentViewController)
-[![Version](https://img.shields.io/cocoapods/v/SegmentViewController.svg?style=flat)](http://cocoapods.org/pods/SegmentViewController)
-[![License](https://img.shields.io/cocoapods/l/SegmentViewController.svg?style=flat)](http://cocoapods.org/pods/SegmentViewController)
-[![Platform](https://img.shields.io/cocoapods/p/SegmentViewController.svg?style=flat)](http://cocoapods.org/pods/SegmentViewController)
-
-
-<center><img src="https://j.gifs.com/WnGRXE.gif" width="320" align="middle"></center>
+[![CI Status](https://img.shields.io/travis/Nemanja/SegmentedPager.svg?style=flat)](https://travis-ci.org/Nemanja/SegmentedPager)
+[![Version](https://img.shields.io/cocoapods/v/SegmentedPager.svg?style=flat)](https://cocoapods.org/pods/SegmentedPager)
+[![License](https://img.shields.io/cocoapods/l/SegmentedPager.svg?style=flat)](https://cocoapods.org/pods/SegmentedPager)
+[![Platform](https://img.shields.io/cocoapods/p/SegmentedPager.svg?style=flat)](https://cocoapods.org/pods/SegmentedPager)
 
 ## Example
 
@@ -16,17 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-SegmentViewController is available through [CocoaPods](http://cocoapods.org). To install
+SegmentedPager is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SegmentViewController"
+pod 'SegmentedPager'
 ```
 
 ## Author
 
-Nemanja92, nemanja92@icloud.com
+Nemanja, nemanja92@icloud.com
 
 ## License
 
-SegmentViewController is available under the MIT license. See the LICENSE file for more info.
+SegmentedPager is available under the MIT license. See the LICENSE file for more info.

@@ -1,16 +1,16 @@
 PODS:
-  - SegmentViewController (0.1.0)
+  - SegmentedPager (0.1.0)
 
 DEPENDENCIES:
-  - SegmentViewController (from `../`)
+  - SegmentedPager (from `../`)
 
 EXTERNAL SOURCES:
-  SegmentViewController:
+  SegmentedPager:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SegmentViewController: c567f3b82c2b15d32e511aa065fa14b5a596bc64
+  SegmentedPager: a90b726d40832af0074524167e6dc6bd194b0dab
 
-PODFILE CHECKSUM: ed6c017413cb132ad33c3b194899939b425f1bdc
+PODFILE CHECKSUM: 0c3764151681fcb710af565ac8a63582f79b5275
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.16.2

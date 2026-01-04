@@ -1,9 +1,11 @@
 use_frameworks!
 
-target 'SegmentViewController_Example' do
-  pod 'SegmentViewController', :path => '../'
+platform :ios, '10.0'
 
-  target 'SegmentViewController_Tests' do
+target 'SegmentedPager_Example' do
+  pod 'SegmentedPager', :path => '../'
+
+  target 'SegmentedPager_Tests' do
     inherit! :search_paths
 
     
